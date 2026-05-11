@@ -1,0 +1,12 @@
+{
+  "xamppRoot": "C:\\xampp",
+  "mysqlBin": "C:\\xampp\\mysql\\bin",
+  "activeDataDir": "C:\\xampp\\mysql\\data",
+  "oldDataDir": "C:\\xampp\\mysql\\data_orphaned_for_recovery",
+  "pythonExe": "C:\\Python3\\python.exe",
+  "dbsake": "C:\\tools\\dbsake",
+  "dbsakeWrapper": "C:\\tools\\dbsake_blobfix_runner.py",
+  "brokenTablesFile": "C:\\broken_tables_exact.txt",
+  "recoveryDumpDir": "C:\\ibd_recovery_dumps",
+  "salvageDumpDir": "C:\\ibd_recovery_checkfailed_salvage"
+}

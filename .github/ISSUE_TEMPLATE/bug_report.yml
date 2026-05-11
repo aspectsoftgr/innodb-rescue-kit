@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a problem with the recovery kit
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: input
+    id: mariadb
+    attributes:
+      label: MariaDB/MySQL version
+      placeholder: "10.4.x MariaDB"
+  - type: input
+    id: xampp
+    attributes:
+      label: XAMPP version
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+  - type: textarea
+    id: command
+    attributes:
+      label: Command run
+      render: powershell
+  - type: textarea
+    id: output
+    attributes:
+      label: Sanitized output/error
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I am working on a copy of the data directory, not the only copy.
+          required: true
+        - label: I removed passwords/private data from this issue.
+          required: true

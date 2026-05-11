@@ -1,0 +1,7 @@
+error
+corrupt
+warning
+failed
+doesn't exist
+does not exist
+crashed

@@ -1,0 +1,7 @@
+{
+  "original_broken_tables": "<number>",
+  "verified_dump_imports": "<number>",
+  "row_count_matches": "<number>",
+  "verification_mysqlcheck_errors": 0,
+  "final_clean_rebuild": "completed"
+}
