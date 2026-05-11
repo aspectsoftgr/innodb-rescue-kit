@@ -27,7 +27,18 @@ jobs:
       - name: Compile Python scripts
         shell: pwsh
         run: |
-          python -m py_compile scripts/03-dbsake-blobfix-runner.py
+          $ErrorActionPreference = 'Stop'
+          @'
+          import pathlib
+          import py_compile
+          import tempfile
+
+          with tempfile.TemporaryDirectory() as cache_dir:
+              cache_root = pathlib.Path(cache_dir)
+              for script in pathlib.Path('scripts').glob('*.py'):
+                  cfile = cache_root / script.with_suffix('.pyc').name
+                  py_compile.compile(str(script), cfile=str(cfile), doraise=True)
+          '@ | python -
 
       - name: Run PSScriptAnalyzer
         shell: pwsh
